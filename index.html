@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VT22WC9K8M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VT22WC9K8M');
+  </script>
+
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Legal & Banking Law Study Portal</title>
-  <meta name="description" content="Dedicated page-by-page study portal for 10 detailed Legal and Banking Law exam topics with exact English & Gujarati text." />
+  <meta name="description"
+    content="Dedicated page-by-page study portal for 10 detailed Legal and Banking Law exam topics with exact English & Gujarati text." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -48,13 +66,16 @@
       width: 8px;
       height: 8px;
     }
+
     ::-webkit-scrollbar-track {
       background: #f1f5f9;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #cbd5e1;
       border-radius: 4px;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: #94a3b8;
     }
@@ -66,24 +87,33 @@
       margin: 1.5rem 0;
       font-size: 0.95rem;
     }
-    .legal-table th, .legal-table td {
+
+    .legal-table th,
+    .legal-table td {
       border: 1px solid #cbd5e1;
       padding: 0.75rem 1rem;
       text-align: left;
     }
+
     .legal-table th {
       background-color: #f1f5f9;
       font-weight: 700;
       color: #0f172a;
     }
+
     .legal-table tr:nth-child(even) {
       background-color: #f8fafc;
     }
 
     /* Print styling */
     @media print {
-      body { background: white !important; }
-      .no-print { display: none !important; }
+      body {
+        background: white !important;
+      }
+
+      .no-print {
+        display: none !important;
+      }
     }
   </style>
 </head>
@@ -99,21 +129,25 @@
 
   <!-- ================= VIEW 2: DEDICATED FULL TOPIC PAGE ================= -->
   <div id="topic-view" class="hidden w-full flex-1 flex flex-col bg-white">
-    
+
     <!-- Top Sticky Bar -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 sm:px-8 py-3.5 shadow-sm no-print">
+    <header
+      class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 px-4 sm:px-8 py-3.5 shadow-sm no-print">
       <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
-        
+
         <!-- Back Button & Topic Info -->
         <div class="flex items-center gap-3 min-w-0">
-          <button onclick="goHome()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition shadow-sm" title="Back to All Topics">
+          <button onclick="goHome()"
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition shadow-sm"
+            title="Back to All Topics">
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
             <span>All Topics</span>
           </button>
-          
+
           <div class="min-w-0 hidden sm:block">
             <div class="flex items-center gap-2">
-              <span id="page-topic-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-600 text-white">Topic 1</span>
+              <span id="page-topic-badge"
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-600 text-white">Topic 1</span>
               <span id="page-topic-subtitle" class="text-xs text-slate-500 truncate">Subtitle</span>
             </div>
           </div>
@@ -121,16 +155,22 @@
 
         <!-- Right Side Actions: Copy Text, Prev / Next -->
         <div class="flex items-center gap-2">
-          <button onclick="copyPageText()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 transition shadow-sm" title="Copy topic text">
+          <button onclick="copyPageText()"
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 transition shadow-sm"
+            title="Copy topic text">
             <i data-lucide="copy" class="w-4 h-4 text-slate-500"></i>
             <span class="hidden md:inline">Copy Text</span>
           </button>
 
-          <button id="top-btn-prev" onclick="navigateTopic(-1)" class="p-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" title="Previous Topic">
+          <button id="top-btn-prev" onclick="navigateTopic(-1)"
+            class="p-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
+            title="Previous Topic">
             <i data-lucide="chevron-left" class="w-4 h-4"></i>
           </button>
 
-          <button id="top-btn-next" onclick="navigateTopic(1)" class="p-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition shadow-sm" title="Next Topic">
+          <button id="top-btn-next" onclick="navigateTopic(1)"
+            class="p-2 rounded-xl text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition shadow-sm"
+            title="Next Topic">
             <i data-lucide="chevron-right" class="w-4 h-4"></i>
           </button>
         </div>
@@ -140,10 +180,11 @@
 
     <!-- Main Full-Page Content Container -->
     <main class="w-full max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-12 flex-1">
-      
+
       <!-- Topic Header Banner -->
       <div class="mb-8 pb-6 border-b border-slate-200">
-        <span id="content-topic-badge" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3">
+        <span id="content-topic-badge"
+          class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200 mb-3">
           Topic 1
         </span>
         <h1 id="page-topic-title" class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 leading-tight">
@@ -160,18 +201,22 @@
       </article>
 
       <!-- Bottom Page Navigation Bar -->
-      <div class="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 no-print">
-        <button id="bottom-btn-prev" onclick="navigateTopic(-1)" class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+      <div
+        class="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 no-print">
+        <button id="bottom-btn-prev" onclick="navigateTopic(-1)"
+          class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
           <i data-lucide="chevron-left" class="w-4 h-4"></i>
           <span id="bottom-prev-label">Previous Topic</span>
         </button>
 
-        <button onclick="goHome()" class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 transition">
+        <button onclick="goHome()"
+          class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 transition">
           <i data-lucide="grid" class="w-4 h-4"></i>
           <span>Back to All 10 Topics</span>
         </button>
 
-        <button id="bottom-btn-next" onclick="navigateTopic(1)" class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 hover:bg-brand-700 text-white transition shadow-sm">
+        <button id="bottom-btn-next" onclick="navigateTopic(1)"
+          class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 hover:bg-brand-700 text-white transition shadow-sm">
           <span id="bottom-next-label">Next Topic</span>
           <i data-lucide="chevron-right" class="w-4 h-4"></i>
         </button>
@@ -180,13 +225,15 @@
     </main>
 
     <!-- Floating Scroll-To-Top Button -->
-    <button id="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="hidden fixed bottom-6 right-6 p-3 rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-xl hover:scale-105 transition no-print z-30">
+    <button id="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="hidden fixed bottom-6 right-6 p-3 rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-xl hover:scale-105 transition no-print z-30">
       <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </button>
   </div>
 
   <!-- Toast Notification Popup -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl flex items-center gap-2 transition-all">
+  <div id="toast"
+    class="fixed bottom-6 right-6 z-50 hidden px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl flex items-center gap-2 transition-all">
     <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
     <span id="toast-text">Text copied to clipboard!</span>
   </div>
@@ -597,7 +644,7 @@ Therefore, RBI plays a vital role in maintaining an orderly, stable and efficien
 
 આથી ભારતમાં મજબૂત, સ્થિર અને કાર્યક્ષમ નાણાકીય વ્યવસ્થા જાળવવામાં RBIનું મહત્વપૂર્ણ સ્થાન છે.`
       },
-            {
+      {
         id: 2,
         number: "Topic 2",
         title: "Banking Regulation Act, 1949",
@@ -6173,4 +6220,5 @@ Cheque Dishonour, ખાસ કરીને Section 138, cheque transactions ન
     });
   </script>
 </body>
+
 </html>
